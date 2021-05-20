@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 599px){
+  （CSSを記述）
+  }
+
+header{
+  background-color: rgb(18, 168, 68);
+  height: 100px;
+}
+
+  
+.welcome{
+  background-image: url("./LINE_P20210514_14085720.jpg");
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  font-size: 50px;
+  font-weight: 350;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+header > h1{
+  color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+}
+
+li{
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  color: brown;
+}
+
+button{
+  margin-bottom: 20px;
+}
+
+footer{
+  background-color: rgb(18, 168, 68);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
