@@ -9,3 +9,39 @@
   margin: 0 auto;
   }
 }
+
+.box-top, .box-bottom{
+  display: flex;
+  flex-direction: row;
+}
+
+img{
+  /* position: absolute; */
+  height: 111px;
+  width: calc(110px /4 * 3);
+}
+
+li{
+  list-style: none;}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.number{
+  width: auto;
+  height: auto;
+  background-color: red;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.name{
+  margin: 10px;
+}
+
+span{
+  background-color: aqua;
+}
