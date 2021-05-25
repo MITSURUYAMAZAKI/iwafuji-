@@ -30,14 +30,13 @@
 </head>
 <body>
   <h1>内容をご確認ください</h1>
-<?php echo $name;
-echo $name;
-echo $name;
-
-
-
-
-?>
+    <?php echo $name;?><br>
+    <?php echo $line;?><br>
+    <?php echo $position;?><br>
+    <?php echo $question;?><br>
+    <form action="send.php" method="GET">
+      <input type="submit" value="応募する">
+    </form>
 </body>
 </html>
 
