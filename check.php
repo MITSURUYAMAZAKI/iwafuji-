@@ -34,7 +34,7 @@
     <?php echo $line;?><br>
     <?php echo $position;?><br>
     <?php echo $question;?><br>
-    <form action="send.php" method="GET">
+    <form action="completed.php" method="GET">
       <input type="submit" value="応募する">
     </form>
 </body>

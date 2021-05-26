@@ -4,9 +4,11 @@ if(!empty($_GET) && isset($_GET['name'])){
   $name = $_GET['name'];
   $line = $_GET['line'];
   $position = $_GET['position'];
+      // foreach($positions as $position){}
+      
   $question = $_GET['question'];
   $content = [$name, $line, $position, $question]; 
-  // var_dump($_GET);
+  var_dump($_GET);
 
   $dsn = 'mysql:dbname=recruit;host=localhost';
   $user = 'root';
@@ -50,23 +52,23 @@ try {
 
   // SMTPサーバの設定
   $mail->isSMTP();                          // SMTPの使用宣言
-  $mail->Host       = 'mail.example.com';   // SMTPサーバーを指定
+  $mail->Host       = 'smtp.gmail.com';   // SMTPサーバーを指定
   $mail->SMTPAuth   = true;                 // SMTP authenticationを有効化
-  $mail->Username   = 'user@example.com';   // SMTPサーバーのユーザ名
-  $mail->Password   = 'password';           // SMTPサーバーのパスワード
+  $mail->Username   = 'n90.yamazaki.mitsuru@gmail.com';   // SMTPサーバーのユーザ名
+  $mail->Password   = 'mo55ori4na31';           // SMTPサーバーのパスワード
   $mail->SMTPSecure = 'tls';  // 暗号化を有効（tls or ssl）無効の場合はfalse
   $mail->Port       = 465; // TCPポートを指定（tlsの場合は465や587）
 
   // 送受信先設定（第二引数は省略可）
   $mail->setFrom('n90.yamazaki.mitsuru@gmail.com', '岩藤野球部'); // 送信者
   $mail->addAddress('zakiyama.com12.aaa@gmail.com', '山崎満');   // 宛先
-  $mail->addReplyTo('n90.yamazaki.mitsuru@gmail.com', 'お問い合わせ'); // 返信先
+  // $mail->addReplyTo('n90.yamazaki.mitsuru@gmail.com', 'お問い合わせ'); // 返信先
   // $mail->addCC('cc@example.com', '受信者名'); // CC宛先
   $mail->Sender = 'return@example.com'; // Return-path
 
   // 送信内容設定
-  $mail->Subject = '件名'; 
-  $mail->Body    = 'メッセージ本文';  
+  $mail->Subject = '件名';
+  $mail->Body    = 'テスト';
 
   // 送信
   $mail->send();
