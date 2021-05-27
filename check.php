@@ -1,23 +1,12 @@
 <?php
-    if(!empty($_GET) && isset($_GET['name'])){
-      $name = $_GET['name'];
-      $line = $_GET['line'];
-      $position = $_GET['position'];
-      $question = $_GET['question'];
-      $content = [$name, $line, $position, $question]; 
-      // var_dump($_GET);
+    if(!empty($_POST) && isset($_POST['name']) && isset($_POST['line']) && isset($_POST['positions'])){
+      $name = $_POST['name'];
+      $line = $_POST['line'];
+      $positions = implode("、 ",$_POST['positions']);
+      $question = $_POST['question'];
+      // $content = [$name, $line, $positions, $question]; 
+      // var_dump($_POST);
 
-      $dsn = 'mysql:dbname=recruit;host=localhost';
-      $user = 'root';
-      $password='';
-      $dbh = new PDO($dsn, $user, $password);
-      $dbh->query('SET NAMES utf8');
-      $sql = 'INSERT INTO `apply` SET `name` = ?, `line` = ?, `position` = ?, `question` = ?';
- 
-      // $contentの配列をつくりだしている
-      $stmt = $dbh->prepare($sql);
-      $stmt->execute($content);
-      // → executeの特徴（引数には配列をいれる）
 }
 ?>
 
@@ -30,12 +19,21 @@
 </head>
 <body>
   <h1>内容をご確認ください</h1>
-    <?php echo $name;?><br>
-    <?php echo $line;?><br>
-    <?php echo $position;?><br>
-    <?php echo $question;?><br>
-    <form action="completed.php" method="GET">
-      <input type="submit" value="応募する">
+    <h2>(1)お名前</h2>
+    <?php echo $name;?>
+    <h2>(2)LINE ID</h2>
+    <?php echo $line;?>
+    <h2>(3)希望ポジション</h2>
+    <?php echo $positions;?>
+    <h2>(4)質問など</h2>
+    <?php echo $question;?>
+    <form action="completed.php" method="POST">
+      <input type="hidden" name="name" value="<?php echo $name; ?>">
+      <input type="hidden" name="line" value="<?php echo $line; ?>">
+      <input type="hidden" name="positions[]" value="<?php echo $positions; ?>">
+      <input type="hidden" name="question" value="<?php echo $question; ?>">
+      <input type="button" onclick="history.back()" value="戻る">
+      <input type="submit" value="送信">
     </form>
 </body>
 </html>

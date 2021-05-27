@@ -9,7 +9,7 @@
   <h1>体験応募</h1>
   <p>選手・マネージャー・カメラマン募集中</p>
   <p>まずは体験からでもOKです</p>
-  <form action="check.php" method="GET">
+  <form action="check.php" method="POST">
     <div>
       <h2>(1)あなたのお名前を教えてください</h2>
       <input type="text" name="name">
@@ -21,15 +21,15 @@
     </div>
     <div>
       <h2>(3)希望ポジションを教えてください（複数選択可）</h2>
-      <input type="checkbox" name="position" value="pitcher"> 投手
-      <input type="checkbox" name="position" value="catcher"> 捕手
-      <input type="checkbox" name="position" value="first-baseman"> 一塁手
-      <input type="checkbox" name="position" value="second-baseman"> 二塁手
-      <input type="checkbox" name="position" value="third-baseman"> 三塁手
-      <input type="checkbox" name="position" value="shortstop"> 遊撃手
-      <input type="checkbox" name="position" value="outfielder"> 外野手
-      <input type="checkbox" name="position" value="manager"> マネージャー
-      <input type="checkbox" name="position" value="cameraman"> カメラマン
+      <input type="checkbox" name="positions[]" value="投手"> 投手
+      <input type="checkbox" name="positions[]" value="捕手"> 捕手
+      <input type="checkbox" name="positions[]" value="一塁手"> 一塁手
+      <input type="checkbox" name="positions[]" value="二塁手"> 二塁手
+      <input type="checkbox" name="positions[]" value="三塁手"> 三塁手
+      <input type="checkbox" name="positions[]" value="遊撃手"> 遊撃手
+      <input type="checkbox" name="positions[]" value="外野手"> 外野手
+      <input type="checkbox" name="positions[]" value="マネージャー"> マネージャー
+      <input type="checkbox" name="positions[]" value="カメラマン"> カメラマン
     </div>
     <div>
       <h2>(4)質問などあればご記入ください</h2>
