@@ -3,11 +3,38 @@
   padding: 0;
 }
 
+/* h1{
+
+
+} */
+
 @media screen and (max-width: 599px){
   *{
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
   }
+
+  .playerbox{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.playerbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  background-color: blueviolet;
 }
 
 .box-top, .box-bottom{
@@ -22,12 +49,13 @@ img{
 }
 
 li{
-  list-style: none;}
+  list-style: none;
+}
 
 ul{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .number{

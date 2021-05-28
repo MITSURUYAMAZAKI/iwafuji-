@@ -15,7 +15,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>確認画面</title>
 </head>
 <body>
   <h1>内容をご確認ください</h1>
