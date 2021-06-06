@@ -1,15 +1,13 @@
 <?php
-$data = "https://spreadsheets.google.com/feeds/list/1_HvD4uDWGngPrQ510bkntrhtJYxxQK-ELhClIO2maz8/od6/public/values?alt=json";
-$json = file_get_contents($data);
-$json_decode = json_decode($json);
-
-$players = $json_decode->feed->entry;
-
-foreach ($players as $player) {
-    echo $player->{'gsx$number'}->{'$t'};
-    echo $player->{'gsx$name'}->{'$t'};
-        echo ",";
-}
+    $dsn = 'mysql:dbname=recruit;host=localhost';
+    $user = 'root';
+    $password='';
+    $dbh = new PDO($dsn, $user, $password);
+    $dbh->query('SET NAMES utf8');  
+    $sql = 'SELECT * FROM `players`';
+    $stmt = $dbh->query($sql);
+    // var_dump($stmt);
+    $dbh = null;
 ?>
 
 <!DOCTYPE html>
@@ -21,93 +19,39 @@ foreach ($players as $player) {
   <link rel="stylesheet" href="./player.css">
 </head>
 <body>
+  <header>
+    <ul>
+      <li><a href="./home.html">ホーム</a></li>
+      <li><a href="./schedule.php">試合予定・結果</a></li>
+      <li><a href="./player.php">選手紹介</a></li>
+      <li><a href="./form.html">選手募集</a></li>
+    </ul>
+  </header>
   <h1>選手紹介</h1>
-  <div class="playerbox">
+  <div class="players-box">
+    <?php foreach( $stmt as $value ) { ?>
     <div class="box">
       <div class="box-top">
-        <div class="number">28</div>
-        <div class="name">山崎　満</div>
+        <h2 class="number"><?php echo "$value[number]";?></h2>
+        <h2 class="name"><?php echo "$value[name]";?></h2>
       </div>
       <div class="box-bottom">
-        <img src="./20210314_210520.jpg" alt="山崎満" class="photo">
-        <div>
-          <span>監督</span>
+        <img src="./<?php echo "$value[img]";?>" alt="<?php echo "$value[name]";?>" class="photo">
+        <div class="bottom-right">
+          <?php if (empty($value[3])){ ?>
+            <span><?php echo "</br>";?></span>
+          <?php } else{ ?>
+            <span class="manager"><?php echo "$value[manager]";?></span>
+          <?php } ?>
           <ul>
-            <li>1993年7月18日生</li>
-            <li>右投左打</li>
-            <li>捕手・外野手</li>
+            <li class="detail"><?php echo "$value[birth]";?></li>
+            <li class="detail"><?php echo "$value[hand]";?></li>
+            <li class="detail"><?php echo "$value[position]";?></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="box">
-      <div class="box-top">
-        <div class="number">28</div>
-        <div class="name">山崎　満</div>
-      </div>
-      <div class="box-bottom">
-        <img src="./20210314_210520.jpg" alt="山崎満" class="photo">
-        <div>
-          <span>監督</span>
-          <ul>
-            <li>1993年7月18日生</li>
-            <li>右投左打</li>
-            <li>捕手・外野手</li>
-          </ul>
-        </div>
-      </div>
-    </div>  <div class="box">
-      <div class="box-top">
-        <div class="number">28</div>
-        <div class="name">山崎　満</div>
-      </div>
-      <div class="box-bottom">
-        <img src="./20210314_210520.jpg" alt="山崎満" class="photo">
-        <div>
-          <span>監督</span>
-          <ul>
-            <li>1993年7月18日生</li>
-            <li>右投左打</li>
-            <li>捕手・外野手</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="box-top">
-        <div class="number">28</div>
-        <div class="name">山崎　満</div>
-      </div>
-      <div class="box-bottom">
-        <img src="./20210314_210520.jpg" alt="山崎満" class="photo">
-        <div>
-          <span>監督</span>
-          <ul>
-            <li>1993年7月18日生</li>
-            <li>右投左打</li>
-            <li>捕手・外野手</li>
-          </ul>
-        </div>
-      </div>
-    </div>  <div class="box">
-      <div class="box-top">
-        <div class="number">28</div>
-        <div class="name">山崎　満</div>
-      </div>
-      <div class="box-bottom">
-        <img src="./20210314_210520.jpg" alt="山崎満" class="photo">
-        <div>
-          <span>監督</span>
-          <ul>
-            <li>1993年7月18日生</li>
-            <li>右投左打</li>
-            <li>捕手・外野手</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php } ?>
   </div>
 </body>
 </html>
-
-<!-- https://docs.google.com/spreadsheets/d/1_HvD4uDWGngPrQ510bkntrhtJYxxQK-ELhClIO2maz8/edit?usp=sharing -->

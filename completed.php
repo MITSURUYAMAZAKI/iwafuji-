@@ -26,4 +26,23 @@ if(!empty($_POST) && isset($_POST['name']) && isset($_POST['line']) && isset($_P
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信完了</title>
+    <link rel="stylesheet" href="completed.css">
+</head>
+<body>
+<header>
+  <ul>
+    <li><a href="./home.html">ホーム</a></li>
+    <li><a href="./schedule.php">試合予定・結果</a></li>
+    <li><a href="./player.php">選手紹介</a></li>
+    <li><a href="./form.html">選手募集</a></li>
+  </ul>
+</header>
 <h1>内容が送信されました</h1>
+</body>
+</html>

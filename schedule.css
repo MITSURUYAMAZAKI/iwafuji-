@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: rgb(18, 168, 68);
+  height: 100px;
+}
+
+header > ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+}
+
+header li{
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+/* ここまで共通 */
+
+.game{
+  display: flex;
+  flex-direction: column;
+  /* background-color: burlywood; */
+  /* margin: 10px; */
+}
+
+.game > li{
+  margin-right: 10px;
+  list-style: none;
+}
+
+.result{
+  border: solid burlywood;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  padding: 10px;
+}

@@ -3,10 +3,25 @@
   padding: 0;
 }
 
-/* h1{
+header{
+  background-color: rgb(18, 168, 68);
+  height: 100px;
+}
 
+header > ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+}
 
-} */
+header li{
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
+}
 
 @media screen and (max-width: 599px){
   *{
@@ -18,12 +33,13 @@
   
   }
 
-  .playerbox{
+  .players-box{
     display: flex;
     flex-direction: column;
   }
 }
-.playerbox{
+
+.players-box{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,28 +47,35 @@
 }
 
 .box{
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   margin: 10px;
-  background-color: blueviolet;
+  background-color: rgb(200, 169, 230);
 }
 
 .box-top, .box-bottom{
   display: flex;
   flex-direction: row;
+  margin: 15px;
+}
+
+.bottom-right{
+  margin: 10px;
 }
 
 img{
   /* position: absolute; */
-  height: 111px;
-  width: calc(110px /4 * 3);
+  height: 200px;
+  width: calc(200px /4 * 3);
+  /* margin: 1px; */
 }
 
-li{
+.detail{
   list-style: none;
+  font-size: larger;
 }
 
-ul{
+.players-box ul{
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -63,13 +86,17 @@ ul{
   height: auto;
   background-color: red;
   border-radius: 50%;
-  margin: 10px;
+  margin-right: 10px;
+ 
 }
 
 .name{
-  margin: 10px;
+  /* margin-right: 10px; */
+  /* font-size: larger; */
+
 }
 
-span{
+.manager{
   background-color: aqua;
+  font-size: larger;
 }

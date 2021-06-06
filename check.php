@@ -16,9 +16,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>確認画面</title>
+  <link rel="stylesheet" href="./check.css">
 </head>
 <body>
-  <h1>内容をご確認ください</h1>
+  <header>
+    <ul>
+      <li><a href="./home.html">ホーム</a></li>
+      <li><a href="./schedule.php">試合予定・結果</a></li>
+      <li><a href="./player.php">選手紹介</a></li>
+      <li><a href="./form.html">選手募集</a></li>
+    </ul>
+  </header>
+
+    <?php if (empty($_POST['name'])) { ?>
+    <h1>お名前を入力してください</h1>
+    <?php }  elseif (empty($_POST['line'])){ ?>
+    <h1>LINE IDを入力してください</h1>
+    <?php }  elseif (empty($_POST['positions'])){ ?>
+    <h1>希望ポジションを入力してください</h1>
+    <?php } else { ?>
+    <h1>内容をご確認ください</h1>
     <h2>(1)お名前</h2>
     <?php echo $name;?>
     <h2>(2)LINE ID</h2>
@@ -33,7 +50,8 @@
       <input type="hidden" name="positions[]" value="<?php echo $positions; ?>">
       <input type="hidden" name="question" value="<?php echo $question; ?>">
       <input type="button" onclick="history.back()" value="戻る">
-      <input type="submit" value="送信">
+      <input type="submit" value="送信"> 
+    <?php } ?>
     </form>
 </body>
 </html>
