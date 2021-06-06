@@ -1,40 +1,28 @@
 *{
   margin: 0;
   padding: 0;
+
 }
 
 @media screen and (max-width: 599px){
-  （CSSを記述）
+  .welcome{
+    width: auto;
+  }
   }
 
 header{
   background-color: rgb(18, 168, 68);
-  height: 100px;
+  height: 50px;
 }
 
-  
-.welcome{
-  background-image: url("./LINE_P20210514_14085720.jpg");
-  background-repeat:  no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 700px;
-  font-size: 50px;
-  font-weight: 350;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-
-header > h1{
+/* header > h1{
   color: blue;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
-ul{
+header > ul{
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -47,6 +35,36 @@ li{
 
 a{
   text-decoration: none;
+}
+
+/* body{
+  
+}
+
+main{
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.welcome{
+  background-image: url("./LINE_P20210514_14085720.jpg");
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  font-size: 60px;
+  font-weight: 350;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: yellow;
+  font-style: bold;
+  /* text-shadow: 1px red; */
+  /* stroke: red;
+  stroke-width: 1px; */
+  -webkit-text-stroke:1px red;
 }
 
 h1{
@@ -64,4 +82,8 @@ footer{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+ul{
+  display: column;
 }
