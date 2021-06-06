@@ -5,7 +5,7 @@
 
 header{
   background-color: rgb(18, 168, 68);
-  height: 100px;
+  height: 50px;
 }
 
 header > ul{
@@ -47,10 +47,12 @@ a{
 }
 
 .box{
-  width: 400px;
-  height: 400px;
+  width: 370px;
+  height: 370px;
   margin: 10px;
-  background-color: rgb(200, 169, 230);
+  background-color: white;
+  border: 9px solid #00cc00
+  /* border-color: burlywood; */
 }
 
 .box-top, .box-bottom{
