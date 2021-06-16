@@ -1,0 +1,72 @@
+/* ここから全ページ統一 */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: rgb(18, 168, 68);
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team{
+  font-size: 60px;
+  font-weight: 350;
+  color: rgb(111, 0, 255);
+  font-style: bold;
+  -webkit-text-stroke:1px white;
+}
+
+header ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+}
+
+header li{
+  margin: 10px;
+}
+
+header a{
+  text-decoration: none;
+}
+
+body{
+  background-color: rgb(229, 218, 190);
+
+}
+
+/* メインのPaddingとMarginは共通で*/
+main{
+  padding: 20px;
+  margin: 0 10%;
+  /* background-color: rgb(229, 218, 190); */
+}
+
+/* ◆を使うものは共通で */
+.content{
+  margin: 20px 0;
+}
+
+h1{
+  color: brown;
+  margin: 10px 0;
+}
+/* ◆を使うものは共通で */
+
+footer{
+  background-color: rgb(18, 168, 68);
+  height: 50px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* ここまで全ページ統一 */

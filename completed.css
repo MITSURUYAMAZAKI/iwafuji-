@@ -1,25 +1,5 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+@import url("./include/include.css");
 
-header{
-  background-color: rgb(18, 168, 68);
-  height: 50px;
+main{
+  height: calc(100vh - 90px - 60px);
 }
-
-header > ul{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  text-decoration: none;
-}
-
-header li{
-  margin: 10px;
-}
-
-a{
-  text-decoration: none;
-}
-/* ここまで共通 */

@@ -1,25 +1,23 @@
-*{
-  margin: 0;
-  padding: 0;
+@import url("./include/include.css");
+
+.recruit{
+  font-size: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 5%;
+  color:white;
+  background-color: rgb(226, 139, 9);
 }
 
-header{
-  background-color: rgb(18, 168, 68);
-  height: 50px;
+.back{
+  font-size: 20px;
+  width: 100px;
+  height: auto;
+  border-radius: 5%;
+  color:white;
+  background-color: gray;
 }
 
-header > ul{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  text-decoration: none;
+main{
+  height: calc(100vh - 90px - 60px);
 }
-
-header li{
-  margin: 10px;
-}
-
-a{
-  text-decoration: none;
-}
-/* ここまで共通 */

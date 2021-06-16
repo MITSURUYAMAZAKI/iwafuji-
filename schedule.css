@@ -1,28 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-
-header{
-  background-color: rgb(18, 168, 68);
-  height: 50px;
-}
-
-header > ul{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  text-decoration: none;
-}
-
-header li{
-  margin: 10px;
-}
-
-a{
-  text-decoration: none;
-}
-/* ここまで共通 */
+@import url("./include/include.css");
 
 .game{
   display: flex;

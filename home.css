@@ -1,52 +1,8 @@
-*{
-  margin: 0;
-  padding: 0;
+@import url("./include/include.css");
 
+.jsbb{
+  font-size: 22px;
 }
-
-@media screen and (max-width: 599px){
-  .welcome{
-    width: auto;
-  }
-  }
-
-header{
-  background-color: rgb(18, 168, 68);
-  height: 50px;
-}
-
-/* header > h1{
-  color: blue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
-header > ul{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  text-decoration: none;
-}
-
-li{
-  margin: 10px;
-}
-
-a{
-  text-decoration: none;
-}
-
-/* body{
-  
-}
-
-main{
-  width: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .welcome{
   background-image: url("./LINE_P20210514_14085720.jpg");
@@ -54,36 +10,25 @@ main{
   background-size: cover;
   background-position: center;
   height: 700px;
-  font-size: 60px;
-  font-weight: 350;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: yellow;
-  font-style: bold;
-  /* text-shadow: 1px red; */
-  /* stroke: red;
-  stroke-width: 1px; */
-  -webkit-text-stroke:1px red;
 }
 
-h1{
-  color: brown;
+.recruit{
+  font-size: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 5%;
+  color:white;
+  background-color: rgb(226, 139, 9);
 }
 
-button{
-  margin-bottom: 20px;
-}
+@media screen and (max-width: 820px){
+  .welcome{
+    width: auto;
+    
+  }
 
-footer{
-  background-color: rgb(18, 168, 68);
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-ul{
-  display: column;
-}
+  iframe{
+    width: auto;
+  }
+  }
