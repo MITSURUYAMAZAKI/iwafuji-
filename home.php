@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>岩藤野球部HP</title>
   <link rel="stylesheet" href="./home.css">
+  <link rel="shortcut icon" href="./favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>
