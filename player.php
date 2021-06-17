@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>選手紹介</title>
   <link rel="stylesheet" href="./player.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>

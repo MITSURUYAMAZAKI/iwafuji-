@@ -53,7 +53,7 @@ mb_send_mail( $_POST['mail'], $auto_reply_subject, $auto_reply_text);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>送信完了</title>
   <link rel="stylesheet" href="completed.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>

@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スケジュール</title>
   <link rel="stylesheet" href="./schedule.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>

@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>確認画面</title>
   <link rel="stylesheet" href="./check.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>
@@ -54,7 +54,7 @@
         <input type="hidden" name="question" value="<?php echo $question; ?>">
         <input class="back" type="button" onclick="history.back()" value="戻る">
         <input class="recruit" type="submit" value="送信する"> 
-      <?php } ?>
+        <?php } ?>
       </form>
     </div>
   </main>

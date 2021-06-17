@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>選手募集</title>
   <link rel="stylesheet" href="form.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>

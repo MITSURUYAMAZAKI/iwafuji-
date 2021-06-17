@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>岩藤野球部HP</title>
   <link rel="stylesheet" href="./home.css">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./others/favicon.png">
 </head>
 <body>
   <?php include('./include/include.php');?>
@@ -34,8 +34,8 @@
     </div>
     <div class="content">
       <h1>◆募集</h1>
-      <h2>選手・マネージャー・カメラマン募集中。</h2>
-      <h2>まずは体験からでもOKです。</h2>
+      <h2>選手・マネージャー・カメラマン募集中</h2>
+      <h2>まずは体験からでもOKです</h2>
       <button class="recruit" type="button" onclick="location.href='./form.php'">応募はここから</button>
     </div>
   </main>
